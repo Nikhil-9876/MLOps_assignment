@@ -1,0 +1,23 @@
+{
+  "threshold": 0.5,
+  "model": "lgbm",
+  "n_features": 49,
+  "seed": 42,
+  "lgbm_params": {
+    "n_estimators": 200,
+    "max_depth": 4,
+    "learning_rate": 0.1,
+    "num_leaves": 15
+  },
+  "val_metrics_at_threshold": {
+    "precision": 0.9878787878787879,
+    "recall": 0.9841509433962264,
+    "f1": 0.9860113421550094,
+    "fpr": 0.023222060957910014,
+    "tpr": 0.9841509433962264,
+    "tp": 1304,
+    "fp": 16,
+    "tn": 673,
+    "fn": 21
+  }
+}

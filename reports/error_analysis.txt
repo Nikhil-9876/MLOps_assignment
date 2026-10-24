@@ -1,0 +1,150 @@
+======================================================================
+ERROR ANALYSIS
+======================================================================
+
+--- 10 False Positives (normal traffic flagged as attack) ---
+
+FP #1 (prob=0.6590):
+  Method : GET
+  Path   : /tienda1/publico/registro.jsp
+  Query  : modo=registro&login=horatio&password=B%C1l%21tEo&nombre=Noem%ED&apellidos=Ponsati+Puratic&email=vladimirov%40saludyfitne
+  Body   : 
+  Label  : normal
+
+FP #2 (prob=0.9994):
+  Method : GET
+  Path   : /tienda1/publico/autenticar.jsp
+  Query  : modo=entrar&login=wessels&pwd=P%2BL%C9YadE&remember=on&B1=Entrar
+  Body   : 
+  Label  : normal
+
+FP #3 (prob=0.7582):
+  Method : GET
+  Path   : /tienda1/publico/registro.jsp
+  Query  : modo=registro&login=walkins&password=CUARtelAR&nombre=Cecilio&apellidos=Guinea+Hinojar&email=manzaneque%40ssextremadura.
+  Body   : 
+  Label  : normal
+
+FP #4 (prob=0.8056):
+  Method : GET
+  Path   : /tienda1/publico/registro.jsp
+  Query  : modo=registro&login=foss&password=huic%21h9&nombre=Leopolda&apellidos=Alfonso&email=padoan%40directoriogratuito.et&dni=8
+  Body   : 
+  Label  : normal
+
+FP #5 (prob=0.5569):
+  Method : GET
+  Path   : /tienda1/miembros/editar.jsp
+  Query  : modo=registro&login=toinette&password=ma%24c3donio&nombre=Tali&apellidos=De+Tena+Leguizam%F3n&email=robin%40comerciosdea
+  Body   : 
+  Label  : normal
+
+FP #6 (prob=0.9994):
+  Method : GET
+  Path   : /tienda1/miembros/editar.jsp
+  Query  : modo=registro&login=brind.am&password=jolgorio&nombre=Guiomar&apellidos=Mohedano+Tinoco&email=alkin%40lesionesmusculares
+  Body   : 
+  Label  : normal
+
+FP #7 (prob=1.0000):
+  Method : GET
+  Path   : /tienda1/publico/vaciar.jsp
+  Query  : B2=Vaciar+carrito
+  Body   : 
+  Label  : normal
+
+FP #8 (prob=1.0000):
+  Method : GET
+  Path   : /tienda1/publico/caracteristicas.jsp
+  Query  : id=2
+  Body   : 
+  Label  : normal
+
+FP #9 (prob=0.5917):
+  Method : GET
+  Path   : /tienda1/miembros/editar.jsp
+  Query  : modo=registro&login=tyler&password=Sa%3FBalErO&nombre=Didier&apellidos=Medel+Pujolriu&email=scely_prono%40tobarisch.de&d
+  Body   : 
+  Label  : normal
+
+FP #10 (prob=0.9994):
+  Method : GET
+  Path   : /tienda1/global/creditos.jsp
+  Query  : 
+  Body   : 
+  Label  : normal
+
+--- 10 False Negatives (attacks missed) ---
+
+FN #1 (prob=0.0695, type=Param Tampering / Unknown):
+  Method : GET
+  Path   : /tienda1/miembros/editar.jsp
+  Query  : modo=registro&login=mamie&password=mOnJA&nombre=Ecio&apellidos=Mendivil+Bellv%E9&email=wei%40alfombra.com.gw&dni=636A286
+  Body   : 
+  Label  : attack
+
+FN #2 (prob=0.1386, type=Param Tampering / Unknown):
+  Method : GET
+  Path   : /tienda1/miembros/editar.jsp
+  Query  : modo=registro&login=tebinka&password=bICoQu%CDN&nombre=Beshara&apellidos=Medio+Bullones&email=miravalles_kaa%40castigada
+  Body   : 
+  Label  : attack
+
+FN #3 (prob=0.0500, type=Param Tampering / Unknown):
+  Method : GET
+  Path   : /tienda1/publico/registro.jsp
+  Query  : modo=registro&login=moyce&password=antepuesto&nombre=Alberde&apellidos=Fidalgo&email=pochon%40thw-adm.zm&dni=52825918R&d
+  Body   : 
+  Label  : attack
+
+FN #4 (prob=0.1146, type=Param Tampering / Unknown):
+  Method : GET
+  Path   : /tienda1/publico/registro.jsp
+  Query  : modo=registro&login=nataniel&password=53rD11c4&nombre=Ligia&apellidos=Klindt+Vanega&email=mcvey%40psy%40kot%40erapi.%40a
+  Body   : 
+  Label  : attack
+
+FN #5 (prob=0.1363, type=Param Tampering / Unknown):
+  Method : GET
+  Path   : /tienda1/miembros/editar.jsp
+  Query  : modo=registro&login=lynnette&password=do&nombre=Huen%FA&apellidos=Busquet+Ojelja&email=villafane%40digitalcorp.cx&dni=05
+  Body   : 
+  Label  : attack
+
+FN #6 (prob=0.2194, type=Param Tampering / Unknown):
+  Method : GET
+  Path   : /tienda1/miembros/editar.jsp
+  Query  : modo=registro&login=christel&password=%3Ft3a01bl1&nombre=Nador&apellidos=Paredes&email=cancellieri%40enla.fr&dni=3954714
+  Body   : 
+  Label  : attack
+
+FN #7 (prob=0.0080, type=Param Tampering / Unknown):
+  Method : GET
+  Path   : /tienda1/publico/registro.jsp
+  Query  : modo=registro&login=alteen&password=SemIpleNamente&nombre=Viviana&apellidos=Rigola+Rojo&email=paquerette-walmsley%40gspa
+  Body   : 
+  Label  : attack
+
+FN #8 (prob=0.0626, type=Param Tampering / Unknown):
+  Method : GET
+  Path   : /tienda1/miembros/editar.jsp
+  Query  : modo=registro&login=suat&password=PuerTA1enTAnA&nombre=Isis&apellidos=Piera+Atencia&email=cerini.ban%40g%402horas.coop&d
+  Body   : 
+  Label  : attack
+
+FN #9 (prob=0.2714, type=Param Tampering / Unknown):
+  Method : GET
+  Path   : /tienda1/publico/registro.jsp
+  Query  : modo=registro&login=pubs&password=+&nombre=Juana+del+Pilar&apellidos=Arias+Salavedra&email=keefer-claudio%40hipermadrid.
+  Body   : 
+  Label  : attack
+
+FN #10 (prob=0.0076, type=Param Tampering / Unknown):
+  Method : GET
+  Path   : /tienda1/miembros/editar.jsp
+  Query  : modo=registro&login=gia&password=dESPluMAR&nombre=Eurico&apellidos=Lestany+Borbonio&email=sanchez-polack%40beautifulbody
+  Body   : 
+  Label  : attack
+
+--- FN category breakdown ---
+  Param Tampering / Unknown: 25

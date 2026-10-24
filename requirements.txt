@@ -1,0 +1,12 @@
+xgboost>=2.0.0
+lightgbm>=4.0.0
+scikit-learn>=1.4.0
+numpy>=1.26.0
+pandas>=2.0.0
+scipy>=1.11.0
+matplotlib>=3.7.0
+onnx>=1.15.0
+onnxruntime>=1.17.0
+skl2onnx>=1.16.0
+onnxmltools>=1.12.0
+pytest>=7.4.0
