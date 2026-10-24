@@ -21,12 +21,20 @@ reports/            # metrics.json, plots
 tests/              # pytest suite
 ```
 
-## Quick Start
+## Setup (always use a virtual environment)
 
 ```bash
+# 1. Create a virtual environment (one-time setup)
+python3 -m venv venv
+
+# 2. Activate it
+source venv/bin/activate        # Linux / Mac
+# venv\Scripts\activate         # Windows
+
+# 3. Install dependencies into the venv (NOT your global Python)
 pip install -r requirements.txt
 
-# Run full pipeline
+# 4. Run the full pipeline
 make train       # parse -> feature extraction -> train -> save models
 make evaluate    # plots + error analysis
 make export      # ONNX export + latency benchmark
@@ -34,15 +42,8 @@ make test        # run pytest suite
 make ci-check    # fails if prod holdout FPR > 1.5%
 ```
 
-Or run each step individually:
-```bash
-python -m src.train --csv dataset/csic_database.csv
-python -m src.evaluate
-python -m src.export_onnx
-
-# Single prediction
-python -m src.predict --method GET --url "http://localhost:8080/tienda1/index.jsp"
-```
+> To leave the venv: `deactivate`
+> The `venv/` folder is gitignored — each person creates their own locally.
 
 ## Model Choice: LightGBM over XGBoost
 - **Speed**: LightGBM's leaf-wise growth is 3–5× faster on this dataset size
